@@ -19,3 +19,13 @@
 1. If an error, then:
 1. Edit index.html
 1. Change invalid path containing with "/artifacts/" to relative path "../artifacts/"
+
+
+# Highlighting TypeScript in Vim
+
+1. Install <https://github.com/tpope/vim-pathogen/>
+    1. Append to `~/.vimrc`:
+
+            execute pathogen#infect()
+
+1. Install TypeScript Vim syntax highlighting <https://github.com/leafgarland/typescript-vim>
