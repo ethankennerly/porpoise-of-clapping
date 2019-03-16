@@ -3,6 +3,7 @@
 - [ ] TODO
 ---
 1. [ ] Open in mobile web browser.
+    1. [ ] finegamedesign.com/porpoiseofclapping
 1. [ ] Frame rate stable 30 FPS on iOS and Android.
 1. [ ] Portrait aspect ratio, safe area range 1:2.2 to 3:4.
 1. [ ] Pixel graphics, at screen height 320.
