@@ -6,7 +6,9 @@
     "SerializedVersion": 0,
     "Entities": [
         { "$TypeId": 9, "Id": "d06ae1ac00ad4cacae3e8c07296965d9", "Name": "Camera" },
-        { "$TypeId": 9, "Id": "7ec7a8cc478f4450b8bae5d0cd537eb2", "Name": "parallax-mountain-bg" }
+        { "$TypeId": 9, "Id": "7ec7a8cc478f4450b8bae5d0cd537eb2", "Name": "background" },
+        { "$TypeId": 9, "Id": "f7e2a97ad71a4aa68c05271c5bef313c", "Name": "wave" },
+        { "$TypeId": 9, "Id": "117e951fa341476ca390d488ea5e2f25", "Name": "wave" }
     ]
 },
 {
@@ -45,14 +47,22 @@
 {
     "$TypeId": 5,
     "Id": "7ec7a8cc478f4450b8bae5d0cd537eb2",
-    "Name": "parallax-mountain-bg",
+    "Name": "background",
     "Enabled": true,
     "Static": false,
     "Layer": 0,
     "Components": [{
         "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
     }, {
-        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" }
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Properties": {
+            "position": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "z": 10
+                }
+            }
+        }
     }, {
         "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
     }, {
@@ -61,6 +71,68 @@
         "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
         "Properties": {
             "sprite": { "$TypeId": 10, "Guid": "45d73bb184576874d98ec10485672405", "FileId": 21300000, "Type": 3 }
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "f7e2a97ad71a4aa68c05271c5bef313c",
+    "Name": "wave",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Properties": {
+            "position": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "z": 1
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" }
+    }, {
+        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
+        "Properties": {
+            "sprite": { "$TypeId": 10, "Guid": "8a89b20c7b5ad414e85a4065461a7cdf", "FileId": 21300000, "Type": 3 }
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "117e951fa341476ca390d488ea5e2f25",
+    "Name": "wave",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Properties": {
+            "position": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": 0.38,
+                    "y": -0.3,
+                    "z": -1
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" }
+    }, {
+        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
+        "Properties": {
+            "sprite": { "$TypeId": 10, "Guid": "8a89b20c7b5ad414e85a4065461a7cdf", "FileId": 21300000, "Type": 3 }
         }
     }]
 }]

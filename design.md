@@ -2,13 +2,13 @@
 
 - [ ] TODO
 ---
-1. [ ] Open in mobile web browser.
-    1. [ ] finegamedesign.com/porpoiseofclapping
-1. [ ] Frame rate stable 30 FPS on iOS and Android.
-1. [ ] Portrait aspect ratio, safe area range 1:2.2 to 3:4.
-1. [ ] Pixel graphics, at screen height 320.
-1. [ ] See sunset.
-1. [ ] See waves.
+1. Open in mobile web browser.
+    1. <http://finegamedesign.com/porpoiseofclapping>
+1. Frame rate stable 30 FPS on iOS and Android.
+1. Portrait aspect ratio, safe area range 1:2.2 to 3:4.
+1. Pixel graphics, at screen height 320 or less.
+1. See sunset.
+1. See waves.
 1. [ ] Near bottom read prompt: Tap here.
 1. [ ] Tap anywhere. See hands tap together.
 1. [ ] See porpoise arch over wave.
