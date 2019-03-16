@@ -11,6 +11,7 @@
 1. See waves.
 1. [ ] Near bottom read prompt: Tap here.
 1. [ ] Tap anywhere. See hands tap together.
+1. See porpoise.
 1. [ ] See porpoise arch over wave.
 1. [ ] See porpoise leap into the air.
 1. [ ] Read prompt: Tap 3 times.
