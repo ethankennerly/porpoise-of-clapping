@@ -10,14 +10,18 @@
 1. See sunset.
 1. See waves.
 1. [ ] Near bottom read prompt: Tap here.
+    1. See finger tap icon.
 1. [ ] Tap anywhere. See hands tap together.
-1. See porpoise.
+    1. [ ] Hear clap.
 1. [ ] See porpoise arch over wave.
-1. [ ] See porpoise leap into the air.
+    1. See porpoise.
+    1. [ ] Hear wave.
 1. [ ] Read prompt: Tap 3 times.
+1. [ ] See porpoise leap into the air.
+    1. [ ] Hear wave.
 1. [ ] Tap three times.
-1. [ ] Read speech bubble with next text from a list. Examples:
-    1. [ ] May everyday have a porpoise.
-    1. [ ] Live with a porpoise.
-    1. [ ] You found a porpoise.
-    1. [ ] You are a most benevolent outcome.
+    1. [ ] Hear clicking.
+    1. [ ] Read speech bubble with next text from a list. Examples:
+        1. [ ] May everyday have a porpoise.
+        1. [ ] Live with a porpoise.
+        1. [ ] You found a porpoise.
