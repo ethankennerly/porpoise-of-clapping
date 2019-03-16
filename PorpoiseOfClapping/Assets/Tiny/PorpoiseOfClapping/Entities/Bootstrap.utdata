@@ -8,8 +8,8 @@
         { "$TypeId": 9, "Id": "d06ae1ac00ad4cacae3e8c07296965d9", "Name": "Camera" },
         { "$TypeId": 9, "Id": "7ec7a8cc478f4450b8bae5d0cd537eb2", "Name": "background" },
         { "$TypeId": 9, "Id": "f7e2a97ad71a4aa68c05271c5bef313c", "Name": "wave" },
-        { "$TypeId": 9, "Id": "4a193b2115234bb7b650f7241f9342be", "Name": "PorpoiseRotator" },
-        { "$TypeId": 9, "Id": "0c9cad5d9b9046aea1d94cfba224070a", "Name": "PorpoiseRotator" },
+        { "$TypeId": 9, "Id": "4a193b2115234bb7b650f7241f9342be", "Name": "HalfCircleRotator" },
+        { "$TypeId": 9, "Id": "0c9cad5d9b9046aea1d94cfba224070a", "Name": "HalfCircleRotator" },
         { "$TypeId": 9, "Id": "f85e503736e94817a4d34939baf1d2bc", "Name": "RotationOffset" },
         { "$TypeId": 9, "Id": "fb07578068334409af4e47fc2ebbecb5", "Name": "porpoise" },
         { "$TypeId": 9, "Id": "117e951fa341476ca390d488ea5e2f25", "Name": "wave" },
@@ -116,7 +116,7 @@
 {
     "$TypeId": 5,
     "Id": "4a193b2115234bb7b650f7241f9342be",
-    "Name": "PorpoiseRotator",
+    "Name": "HalfCircleRotator",
     "Enabled": true,
     "Static": false,
     "Layer": 0,
@@ -163,7 +163,7 @@
 {
     "$TypeId": 5,
     "Id": "0c9cad5d9b9046aea1d94cfba224070a",
-    "Name": "PorpoiseRotator",
+    "Name": "HalfCircleRotator",
     "Enabled": true,
     "Static": false,
     "Layer": 0,
@@ -207,7 +207,10 @@
             }
         }
     }, {
-        "Type": { "Id": "fc67c5aa223b4449a3ee651dabd2ef86", "Name": "RotationTweener" }
+        "Type": { "Id": "fc67c5aa223b4449a3ee651dabd2ef86", "Name": "RotationTweener" },
+        "Properties": {
+            "isTweening": false
+        }
     }]
 },
 {

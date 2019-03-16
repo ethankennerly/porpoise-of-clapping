@@ -2,18 +2,26 @@ namespace game {
     export class RotationTweenSystem extends ut.ComponentSystem {
         OnUpdate():void {
             let mouseDown:boolean = ut.Runtime.Input.getMouseButtonDown(0);
-            if (!mouseDown) {
-                return;
-            }
 
+            let deltaTime:number = this.scheduler.deltaTime();
             let duration:number = 3;
             let endRadians:number = Math.PI * -0.999;
             this.world.forEach(
                 [ut.Entity, game.RotationTweener, ut.Core2D.TransformLocalRotation],
                 (entity, rotationTweener, transformRotation) => {
                     if (rotationTweener.isTweening) {
+                        rotationTweener.timeElapsed += deltaTime;
+                        if (rotationTweener.timeElapsed >= duration) {
+                            rotationTweener.isTweening = false;
+                        }
                         return;
                     }
+
+                    if (!mouseDown) {
+                        return;
+                    }
+                    rotationTweener.isTweening = true;
+                    rotationTweener.timeElapsed = 0;
 
                     this.tweenRotationShort(entity, transformRotation, endRadians, duration);
                 }

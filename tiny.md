@@ -1,5 +1,10 @@
 # Review of Project Tiny
 
+- Manual
+    - <https://docs.unity3d.com/Packages/com.unity.tiny@0.14/manual/>
+- Runtime documentation
+    - <https://docs.unity3d.com/Packages/com.unity.tiny@0.14/rt/tiny_runtime/globals.html>
+
 ## Pros
 
 + 2 MB uncompressed JavaScript build. Compared to 3 MB Unity WebAssembly build.
