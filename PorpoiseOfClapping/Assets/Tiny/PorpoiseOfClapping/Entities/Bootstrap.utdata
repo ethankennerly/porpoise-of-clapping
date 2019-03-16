@@ -9,6 +9,8 @@
         { "$TypeId": 9, "Id": "7ec7a8cc478f4450b8bae5d0cd537eb2", "Name": "background" },
         { "$TypeId": 9, "Id": "f7e2a97ad71a4aa68c05271c5bef313c", "Name": "wave" },
         { "$TypeId": 9, "Id": "4a193b2115234bb7b650f7241f9342be", "Name": "PorpoiseRotator" },
+        { "$TypeId": 9, "Id": "0c9cad5d9b9046aea1d94cfba224070a", "Name": "PorpoiseRotator" },
+        { "$TypeId": 9, "Id": "f85e503736e94817a4d34939baf1d2bc", "Name": "RotationOffset" },
         { "$TypeId": 9, "Id": "fb07578068334409af4e47fc2ebbecb5", "Name": "porpoise" },
         { "$TypeId": 9, "Id": "117e951fa341476ca390d488ea5e2f25", "Name": "wave" },
         { "$TypeId": 9, "Id": "99d9f878a4ab412a90b47098c04e6cd6", "Name": "SpeechBone" },
@@ -126,7 +128,7 @@
             "position": {
                 "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
                 "Properties": {
-                    "y": -0.2
+                    "y": -0.4
                 }
             }
         }
@@ -138,8 +140,100 @@
                 "Properties": {
                     "x": 0,
                     "y": 0,
-                    "z": -0.258819,
-                    "w": 0.9659259
+                    "z": 0,
+                    "w": 1
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" },
+        "Properties": {
+            "scale": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": 1,
+                    "y": 1
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "fc67c5aa223b4449a3ee651dabd2ef86", "Name": "RotationTweener" }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "0c9cad5d9b9046aea1d94cfba224070a",
+    "Name": "PorpoiseRotator",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" },
+        "Properties": {
+            "parent": { "$TypeId": 9, "Id": "4a193b2115234bb7b650f7241f9342be", "Name": "PorpoiseRotator" }
+        }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Properties": {
+            "position": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "y": 0
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" },
+        "Properties": {
+            "rotation": {
+                "Type": { "Id": "dc7e11e5d517ed01fd5d084a6c9fd64d", "Name": "Quaternion" },
+                "Properties": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" },
+        "Properties": {
+            "scale": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": 1,
+                    "y": 1
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "fc67c5aa223b4449a3ee651dabd2ef86", "Name": "RotationTweener" }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "f85e503736e94817a4d34939baf1d2bc",
+    "Name": "RotationOffset",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" },
+        "Properties": {
+            "parent": { "$TypeId": 9, "Id": "0c9cad5d9b9046aea1d94cfba224070a", "Name": "PorpoiseRotator" }
+        }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" },
+        "Properties": {
+            "rotation": {
+                "Type": { "Id": "dc7e11e5d517ed01fd5d084a6c9fd64d", "Name": "Quaternion" },
+                "Properties": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0.8660254,
+                    "w": 0.4999999
                 }
             }
         }
@@ -166,7 +260,7 @@
     "Components": [{
         "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" },
         "Properties": {
-            "parent": { "$TypeId": 9, "Id": "4a193b2115234bb7b650f7241f9342be", "Name": "porpoise" }
+            "parent": { "$TypeId": 9, "Id": "f85e503736e94817a4d34939baf1d2bc", "Name": "Entity" }
         }
     }, {
         "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
@@ -175,7 +269,7 @@
                 "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
                 "Properties": {
                     "x": -0.2,
-                    "y": 0.4
+                    "y": 0.5
                 }
             }
         }
@@ -215,7 +309,7 @@
                 "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
                 "Properties": {
                     "x": 0.38,
-                    "y": -0.5,
+                    "y": -0.4,
                     "z": -1
                 }
             }
