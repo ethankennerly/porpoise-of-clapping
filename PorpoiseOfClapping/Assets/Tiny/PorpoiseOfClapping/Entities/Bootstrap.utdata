@@ -16,6 +16,8 @@
         { "$TypeId": 9, "Id": "99d9f878a4ab412a90b47098c04e6cd6", "Name": "SpeechBone" },
         { "$TypeId": 9, "Id": "5727e28184534ca2b107680a954dfe75", "Name": "pixel-speech-bubble1" },
         { "$TypeId": 9, "Id": "55337200691f41a2b93bea52a8125d4e", "Name": "pixel-speech-bubble2" },
+        { "$TypeId": 9, "Id": "fc2a639a94cb483ea28c5be6b08ee617", "Name": "pixel-speech-bubble3" },
+        { "$TypeId": 9, "Id": "c93e7c3c17fb443a9d583dba80ab17e7", "Name": "pixel-speech-bubble4" },
         { "$TypeId": 9, "Id": "1cc7f993b69245238cf20e3ee52a1875", "Name": "prompt" },
         { "$TypeId": 9, "Id": "6f741418fe9546bab40dee7d291d4e25", "Name": "tap_prompt" }
     ]
@@ -418,6 +420,66 @@
         "Type": { "Id": "4f5dbbbd22b74ce4a1257817b3be91f5", "Name": "PhaseEnabler" },
         "Properties": {
             "enabledPhase": 2
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "fc2a639a94cb483ea28c5be6b08ee617",
+    "Name": "pixel-speech-bubble3",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" },
+        "Properties": {
+            "parent": { "$TypeId": 9, "Id": "99d9f878a4ab412a90b47098c04e6cd6", "Name": "SpeechBone" }
+        }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" }
+    }, {
+        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
+        "Properties": {
+            "sprite": { "$TypeId": 10, "Guid": "e041cb95c6fef204dbb342507078e7d9", "FileId": 21300000, "Type": 3 }
+        }
+    }, {
+        "Type": { "Id": "4f5dbbbd22b74ce4a1257817b3be91f5", "Name": "PhaseEnabler" },
+        "Properties": {
+            "enabledPhase": 3
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "c93e7c3c17fb443a9d583dba80ab17e7",
+    "Name": "pixel-speech-bubble4",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" },
+        "Properties": {
+            "parent": { "$TypeId": 9, "Id": "99d9f878a4ab412a90b47098c04e6cd6", "Name": "SpeechBone" }
+        }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" }
+    }, {
+        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
+        "Properties": {
+            "sprite": { "$TypeId": 10, "Guid": "0c33aea7b1aa7fa43ab1713ed0c8366b", "FileId": 21300000, "Type": 3 }
+        }
+    }, {
+        "Type": { "Id": "4f5dbbbd22b74ce4a1257817b3be91f5", "Name": "PhaseEnabler" },
+        "Properties": {
+            "enabledPhase": 4
         }
     }]
 },
