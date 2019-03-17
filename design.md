@@ -24,6 +24,7 @@
     1. [ ] Hear clicking.
     1. [ ] Read speech bubble with next text from a list. Examples:
         1. May everyday have a porpoise.
-        1. [ ] Live with a porpoise.
+        1. Live with a porpoise.
         1. [ ] You found a porpoise.
+        1. [ ] You give me porpoise.
     1. [ ] See hands tap together.
