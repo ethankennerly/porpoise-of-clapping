@@ -391,6 +391,11 @@
         "Properties": {
             "sprite": { "$TypeId": 10, "Guid": "4b5f6d3cb6330f74a9843032fa034af9", "FileId": 21300000, "Type": 3 }
         }
+    }, {
+        "Type": { "Id": "a6f34d7486d048ddb5d538e7249607a3", "Name": "TapEnabler" },
+        "Properties": {
+            "setEnabledTo": true
+        }
     }]
 },
 {
@@ -450,5 +455,7 @@
         "Properties": {
             "sprite": { "$TypeId": 10, "Guid": "30b55c9192708954380e2ad8614c174a", "FileId": 21300000, "Type": 3 }
         }
+    }, {
+        "Type": { "Id": "a6f34d7486d048ddb5d538e7249607a3", "Name": "TapEnabler" }
     }]
 }]
