@@ -20,13 +20,16 @@
 
 ## Cons
 
-- Not compatible with Unity projects.
+- Code and assets are not compatible with Unity projects.
+- Limited components and integration with Unity editor.
+    - Just basic sprite, audio, mouse input.
+    - For example, does not support text fonts.
+    - Otherwise cannot use Tiny in Unity. Cannot use Unity in Tiny.
 - Only exports HTML5 or PlayableAd.
 - Cannot inspect at runtime.
 - No C#. TypeScript only until up to June, 2019.
     - <https://forum.unity.com/threads/c-update-for-project-tiny.643000/>
 - Requires .NET 4.0 or higher.
-- Limited components and integration with Unity editor.
 - Hard to find documentation on scripting API.
     - How to callback on entity enable in behaviour after entity is disabled and enabled a second time?
     - How to enable entity <https://forum.unity.com/threads/help-how-to-disable-and-enable-the-entity.603145/>
