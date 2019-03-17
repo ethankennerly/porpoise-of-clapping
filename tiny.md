@@ -6,8 +6,8 @@
 
 - Manual
     - <https://docs.unity3d.com/Packages/com.unity.tiny@0.14/manual/>
-- Runtime documentation
-    - <https://docs.unity3d.com/Packages/com.unity.tiny@0.14/rt/tiny_runtime/globals.html>
+- Runtime API
+    - <https://docs.unity3d.com/Packages/com.unity.tiny@0.14/rt/index.html>
 
 ## Pros
 
@@ -37,8 +37,12 @@
         - How to hide sprite of child of disabled entity?
     - Undocumented examples, such as: <https://forum.unity.com/threads/what-is-the-meaning-of-requiredcomponents.645160/>
     - What is the API for subtractive foreach and filter?
+        - `Subtractive` function is documented, but there is no example in the doc nor in the sample projects.
+        - <https://docs.unity3d.com/Packages/com.unity.tiny@0.14/rt/index.html>
     - What is the API for a reactive system?
-    - What is the API for watching when a tween ends?
+    - What is the API for watching for a change when a tween ends?
+    - How can I connect Unity's profiler?
+        - Project Setting has option: auto-connect profiler. But with the IP address of the server, the profiler failes to connect.
 - Less stable.
 - Demos get entities by name. So if entity name changes, the code breaks.
 - Demos use several anonymous functions.
