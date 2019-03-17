@@ -332,7 +332,7 @@
     "$TypeId": 5,
     "Id": "99d9f878a4ab412a90b47098c04e6cd6",
     "Name": "SpeechBone",
-    "Enabled": true,
+    "Enabled": false,
     "Static": false,
     "Layer": 0,
     "Components": [{
@@ -360,6 +360,11 @@
                     "y": 0.2
                 }
             }
+        }
+    }, {
+        "Type": { "Id": "a6f34d7486d048ddb5d538e7249607a3", "Name": "TapEnabler" },
+        "Properties": {
+            "setEnabledTo": true
         }
     }]
 },
@@ -408,6 +413,8 @@
                 }
             }
         }
+    }, {
+        "Type": { "Id": "a6f34d7486d048ddb5d538e7249607a3", "Name": "TapEnabler" }
     }]
 },
 {
