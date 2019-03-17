@@ -11,7 +11,7 @@ namespace game {
                 [ut.Entity, game.PhaseEnabler],
                 (entity, phaseEnabler) => {
                     let enabled:boolean = phase == phaseEnabler.enabledPhase;
-                    game.GameService.setEntityEnabled(this.world, entity, enabled);
+                    let changed:boolean = game.GameService.setEntityEnabled(this.world, entity, enabled);
                 }
             );
 
@@ -20,7 +20,15 @@ namespace game {
                 [ut.Entity, game.PhaseEnabler, ut.Disabled],
                 (entity, phaseEnabler, disabled) => {
                     let enabled:boolean = phase == phaseEnabler.enabledPhase;
-                    game.GameService.setEntityEnabled(this.world, entity, enabled);
+                    let changed:boolean = game.GameService.setEntityEnabled(this.world, entity, enabled);
+                    let willAudioStart:boolean = this.world.hasComponent(entity, game.OnEntityEnableAudioSourceStart);
+                    if (!enabled) {
+                        return;
+                    }
+                    if (!willAudioStart) {
+                        return;
+                    }
+                    AudioSourceUtils.start(this.world, entity);
                 }
             );
         }

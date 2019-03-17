@@ -10,11 +10,11 @@
 1. Pixel graphics, at screen height 320 or less.
 1. See sunset.
 1. See waves.
-    1. [ ] Waves are bluish.
+    1. Waves are bluish.
 1. Near bottom.
     1. See finger tap icon.
 1. Tap anywhere.
-    1. [ ] Hear clap.
+    1. Hear clap.
     1. Hide tap prompt.
     1. See porpoise arch over wave.
         1. See porpoise.

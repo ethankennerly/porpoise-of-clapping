@@ -118,7 +118,16 @@
     }, {
         "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
         "Properties": {
-            "sprite": { "$TypeId": 10, "Guid": "8a89b20c7b5ad414e85a4065461a7cdf", "FileId": 21300000, "Type": 3 }
+            "sprite": { "$TypeId": 10, "Guid": "8a89b20c7b5ad414e85a4065461a7cdf", "FileId": 21300000, "Type": 3 },
+            "color": {
+                "Type": { "Id": "2a90a1633d6dc16cd37cdfaca7b93cea", "Name": "Color" },
+                "Properties": {
+                    "r": 0.259434,
+                    "g": 0.9237654,
+                    "b": 1,
+                    "a": 1
+                }
+            }
         }
     }]
 },
@@ -330,7 +339,16 @@
     }, {
         "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
         "Properties": {
-            "sprite": { "$TypeId": 10, "Guid": "8a89b20c7b5ad414e85a4065461a7cdf", "FileId": 21300000, "Type": 3 }
+            "sprite": { "$TypeId": 10, "Guid": "8a89b20c7b5ad414e85a4065461a7cdf", "FileId": 21300000, "Type": 3 },
+            "color": {
+                "Type": { "Id": "2a90a1633d6dc16cd37cdfaca7b93cea", "Name": "Color" },
+                "Properties": {
+                    "r": 0.1933962,
+                    "g": 1,
+                    "b": 0.992183,
+                    "a": 1
+                }
+            }
         }
     }]
 },
@@ -561,12 +579,12 @@
             "clip": { "$TypeId": 10, "Guid": "aede51edf86d9454491310ddba40e2a5", "FileId": 8300000, "Type": 3 }
         }
     }, {
-        "Type": { "Id": "fb67fae37e3e484fa554012ae4edd7c6", "Name": "AudioSourceStart" }
-    }, {
         "Type": { "Id": "4f5dbbbd22b74ce4a1257817b3be91f5", "Name": "PhaseEnabler" },
         "Properties": {
             "enabledPhase": 1
         }
+    }, {
+        "Type": { "Id": "c5dc96700f6d42568088e0e78994363d", "Name": "OnEntityEnableAudioSourceStart" }
     }]
 },
 {
@@ -577,19 +595,17 @@
     "Static": false,
     "Layer": 0,
     "Components": [{
-        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
-    }, {
         "Type": { "Id": "a60aa1b9ad84a83eefb0d5382a4d5967", "Name": "AudioSource" },
         "Properties": {
             "clip": { "$TypeId": 10, "Guid": "9d58c7cf81954e449965d6ffb5ee114e", "FileId": 8300000, "Type": 3 }
         }
     }, {
-        "Type": { "Id": "fb67fae37e3e484fa554012ae4edd7c6", "Name": "AudioSourceStart" }
-    }, {
         "Type": { "Id": "4f5dbbbd22b74ce4a1257817b3be91f5", "Name": "PhaseEnabler" },
         "Properties": {
             "enabledPhase": 2
         }
+    }, {
+        "Type": { "Id": "c5dc96700f6d42568088e0e78994363d", "Name": "OnEntityEnableAudioSourceStart" }
     }]
 },
 {
@@ -600,19 +616,17 @@
     "Static": false,
     "Layer": 0,
     "Components": [{
-        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
-    }, {
         "Type": { "Id": "a60aa1b9ad84a83eefb0d5382a4d5967", "Name": "AudioSource" },
         "Properties": {
             "clip": { "$TypeId": 10, "Guid": "e35329b925c52e54aadfdc833ca6d09e", "FileId": 8300000, "Type": 3 }
         }
     }, {
-        "Type": { "Id": "fb67fae37e3e484fa554012ae4edd7c6", "Name": "AudioSourceStart" }
-    }, {
         "Type": { "Id": "4f5dbbbd22b74ce4a1257817b3be91f5", "Name": "PhaseEnabler" },
         "Properties": {
             "enabledPhase": 3
         }
+    }, {
+        "Type": { "Id": "c5dc96700f6d42568088e0e78994363d", "Name": "OnEntityEnableAudioSourceStart" }
     }]
 },
 {
@@ -623,19 +637,17 @@
     "Static": false,
     "Layer": 0,
     "Components": [{
-        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
-    }, {
         "Type": { "Id": "a60aa1b9ad84a83eefb0d5382a4d5967", "Name": "AudioSource" },
         "Properties": {
             "clip": { "$TypeId": 10, "Guid": "274855d5323cf014ebfc421978c1dc60", "FileId": 8300000, "Type": 3 }
         }
     }, {
-        "Type": { "Id": "fb67fae37e3e484fa554012ae4edd7c6", "Name": "AudioSourceStart" }
-    }, {
         "Type": { "Id": "4f5dbbbd22b74ce4a1257817b3be91f5", "Name": "PhaseEnabler" },
         "Properties": {
             "enabledPhase": 4
         }
+    }, {
+        "Type": { "Id": "c5dc96700f6d42568088e0e78994363d", "Name": "OnEntityEnableAudioSourceStart" }
     }]
 },
 {
@@ -646,19 +658,17 @@
     "Static": false,
     "Layer": 0,
     "Components": [{
-        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
-    }, {
         "Type": { "Id": "a60aa1b9ad84a83eefb0d5382a4d5967", "Name": "AudioSource" },
         "Properties": {
             "clip": { "$TypeId": 10, "Guid": "aede51edf86d9454491310ddba40e2a5", "FileId": 8300000, "Type": 3 }
         }
     }, {
-        "Type": { "Id": "fb67fae37e3e484fa554012ae4edd7c6", "Name": "AudioSourceStart" }
-    }, {
         "Type": { "Id": "4f5dbbbd22b74ce4a1257817b3be91f5", "Name": "PhaseEnabler" },
         "Properties": {
             "enabledPhase": 5
         }
+    }, {
+        "Type": { "Id": "c5dc96700f6d42568088e0e78994363d", "Name": "OnEntityEnableAudioSourceStart" }
     }]
 },
 {
@@ -669,18 +679,16 @@
     "Static": false,
     "Layer": 0,
     "Components": [{
-        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
-    }, {
         "Type": { "Id": "a60aa1b9ad84a83eefb0d5382a4d5967", "Name": "AudioSource" },
         "Properties": {
             "clip": { "$TypeId": 10, "Guid": "9d58c7cf81954e449965d6ffb5ee114e", "FileId": 8300000, "Type": 3 }
         }
     }, {
-        "Type": { "Id": "fb67fae37e3e484fa554012ae4edd7c6", "Name": "AudioSourceStart" }
-    }, {
         "Type": { "Id": "4f5dbbbd22b74ce4a1257817b3be91f5", "Name": "PhaseEnabler" },
         "Properties": {
             "enabledPhase": 6
         }
+    }, {
+        "Type": { "Id": "c5dc96700f6d42568088e0e78994363d", "Name": "OnEntityEnableAudioSourceStart" }
     }]
 }]

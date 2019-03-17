@@ -1,5 +1,9 @@
 # Review of Project Tiny
 
+- Much less productive than Unity workflow.
+
+## Documentation
+
 - Manual
     - <https://docs.unity3d.com/Packages/com.unity.tiny@0.14/manual/>
 - Runtime documentation
@@ -21,9 +25,10 @@
 - Cannot inspect at runtime.
 - No C#. TypeScript only until up to June, 2019.
     - <https://forum.unity.com/threads/c-update-for-project-tiny.643000/>
-. Requires .NET 4.0 or higher.
+- Requires .NET 4.0 or higher.
 - Limited components and integration with Unity editor.
 - Hard to find documentation on scripting API.
+    - How to callback on entity enable in behaviour after entity is disabled and enabled a second time?
     - How to enable entity <https://forum.unity.com/threads/help-how-to-disable-and-enable-the-entity.603145/>
         - How to show disabled entity?
         - How to hide sprite of child of disabled entity?
