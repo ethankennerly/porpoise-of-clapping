@@ -14,7 +14,7 @@
     1. See finger tap icon.
 1. [ ] Tap anywhere.
     1. [ ] Hear clap.
-    1. [ ] Hide tap prompt.
+    1. Hide tap prompt.
     1. See porpoise arch over wave.
         1. See porpoise.
         1. [ ] Hear wave.

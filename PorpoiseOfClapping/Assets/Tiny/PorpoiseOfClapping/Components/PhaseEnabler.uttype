@@ -1,0 +1,21 @@
+﻿[{
+    "$TypeId": 3,
+    "Id": "4f5dbbbd22b74ce4a1257817b3be91f5",
+    "Name": "PhaseEnabler",
+    "ExportFlags": 0,
+    "Unlisted": false,
+    "Visibility": 0,
+    "TypeCode": "Component",
+    "Fields": [{
+        "Id": "fc554ca003da4e4da82ae5a4538aff55",
+        "Name": "enabledPhase",
+        "FieldType": { "Id": "27c155635ccb4ab2bcb79ef5aaf129ec", "Name": "Int8" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }],
+    "DefaultValue": {
+        "Type": { "Id": "4f5dbbbd22b74ce4a1257817b3be91f5", "Name": "PhaseEnabler" }
+    }
+}]

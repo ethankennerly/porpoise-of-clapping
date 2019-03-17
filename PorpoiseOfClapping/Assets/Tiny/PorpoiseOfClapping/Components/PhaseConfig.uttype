@@ -1,0 +1,49 @@
+﻿[{
+    "$TypeId": 3,
+    "Id": "c698f7180d1b4afeb6cbadafde23746e",
+    "Name": "PhaseConfig",
+    "ExportFlags": 0,
+    "Unlisted": false,
+    "Visibility": 0,
+    "TypeCode": "Configuration",
+    "Fields": [{
+        "Id": "ba4836493da144819aed7283be042b59",
+        "Name": "phase",
+        "FieldType": { "Id": "27c155635ccb4ab2bcb79ef5aaf129ec", "Name": "Int8" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }, {
+        "Id": "8e929bdece9143c39697650bb637f25e",
+        "Name": "changed",
+        "FieldType": { "Id": "2b477f505af74487b7092b5617d88d3f", "Name": "Boolean" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }, {
+        "Id": "e1d1b3d3efcf4e599bbaf1a74b5cbd0d",
+        "Name": "minDuration",
+        "FieldType": { "Id": "67325dccf2f047c19c7ef4a045354e67", "Name": "Float32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }, {
+        "Id": "c462de265e4743c0b3652192c8bd7a4f",
+        "Name": "timeElapsed",
+        "FieldType": { "Id": "67325dccf2f047c19c7ef4a045354e67", "Name": "Float32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }],
+    "DefaultValue": {
+        "Type": { "Id": "c698f7180d1b4afeb6cbadafde23746e", "Name": "PhaseConfig" },
+        "Properties": {
+            "minDuration": 3,
+            "timeElapsed": 0
+        }
+    }
+}]

@@ -78,5 +78,7 @@
             "height": 266,
             "autoSizeToFrame": true
         }
+    }, {
+        "Type": { "Id": "c698f7180d1b4afeb6cbadafde23746e", "Name": "PhaseConfig" }
     }]
 }]
