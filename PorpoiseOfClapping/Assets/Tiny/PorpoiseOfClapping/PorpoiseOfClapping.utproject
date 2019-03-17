@@ -60,7 +60,8 @@
         { "Id": "ce3f1bd7050540b70d450a606e226ea2", "Name": "UTiny.Shared" },
         { "Id": "91f1133fa9293ef9b61da0f1e6cbceeb", "Name": "UTiny.Animation" },
         { "Id": "77778da25aeb380ab7e46deb6d495cdc", "Name": "UTiny.Tweens" },
-        { "Id": "bc6e41f7bf2c4ed69397793ca57e120f", "Name": "Main" }
+        { "Id": "bc6e41f7bf2c4ed69397793ca57e120f", "Name": "Main" },
+        { "Id": "251df5ef6819533f94e1cbf3181f722e", "Name": "UTiny.Audio" }
     ],
     "StartupEntityGroup": { "Id": "9711ce6715f7406ea060cb5a6e2ab165", "Name": "NewEntityGroup" }
 },
@@ -80,5 +81,7 @@
         }
     }, {
         "Type": { "Id": "c698f7180d1b4afeb6cbadafde23746e", "Name": "PhaseConfig" }
+    }, {
+        "Type": { "Id": "e816e7b93a13b9e5ddf993486ca79278", "Name": "AudioConfig" }
     }]
 }]

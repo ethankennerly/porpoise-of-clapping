@@ -17,15 +17,16 @@ namespace game {
                 return;
             }
 
-            console.log("OnTapPhaseIncrementerSystem: mouseDown");
             if (phaseConfig.phase > 0 && phaseConfig.timeElapsed < phaseConfig.minDuration) {
                 this.world.setConfigData(phaseConfig);
                 return;
             }
 
             phaseConfig.phase++;
-            console.log("OnTapPhaseIncrementerSystem: changed phase=" + phaseConfig.phase +
-                " time elapsed=" + phaseConfig.timeElapsed);
+            if (phaseConfig.phase > phaseConfig.maxPhase)
+            {
+                phaseConfig.phase = 0;
+            }
             phaseConfig.timeElapsed = 0;
             phaseConfig.changed = true;
             this.world.setConfigData(phaseConfig);

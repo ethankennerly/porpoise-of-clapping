@@ -2,7 +2,7 @@
     "compilerOptions": {
         "experimentalDecorators": true,
         "skipLibCheck": true,
-        "outFile": "C:/Users/Ethan/workspace/porpoise-of-clapping/PorpoiseOfClapping/TinyExport/PorpoiseOfClapping/html5/debug/artifacts/scripts/tsc-emit.js",
+        "outFile": "C:/Users/Ethan/workspace/porpoise-of-clapping/PorpoiseOfClapping/TinyExport/PorpoiseOfClapping/html5/development/artifacts/scripts/tsc-emit.js",
         "sourceMap": true,
         "target": "ES5"
     },
@@ -25,11 +25,12 @@
         "Library/PackageCache/com.unity.tiny@0.14.3-preview/Runtime/Modules/UTiny.Sprite2D/**/*.ts",
         "Library/PackageCache/com.unity.tiny@0.14.3-preview/Runtime/Modules/UTiny.EditorExtensions/**/*.ts",
         "Library/PackageCache/com.unity.tiny@0.14.3-preview/Runtime/Modules/UTiny.Animation/**/*.ts",
-        "Library/PackageCache/com.unity.tiny@0.14.3-preview/Runtime/Modules/UTiny.Tweens/**/*.ts"
+        "Library/PackageCache/com.unity.tiny@0.14.3-preview/Runtime/Modules/UTiny.Tweens/**/*.ts",
+        "Library/PackageCache/com.unity.tiny@0.14.3-preview/Runtime/Modules/UTiny.Audio/**/*.ts"
     ],
     "exclude": [],
     "files": [
-        "TinyExport/PorpoiseOfClapping/html5/debug/artifacts/scripts/bind-generated.d.ts",
+        "TinyExport/PorpoiseOfClapping/html5/development/artifacts/scripts/bind-generated.d.ts",
         "Tiny/Dist/runtimedll/RuntimeStripped.d.ts"
     ]
 }

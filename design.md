@@ -10,9 +10,10 @@
 1. Pixel graphics, at screen height 320 or less.
 1. See sunset.
 1. See waves.
+    1. [ ] Waves are bluish.
 1. Near bottom.
     1. See finger tap icon.
-1. [ ] Tap anywhere.
+1. Tap anywhere.
     1. [ ] Hear clap.
     1. Hide tap prompt.
     1. See porpoise arch over wave.
@@ -22,10 +23,12 @@
     1. See porpoise leap into the air.
         1. [ ] Hear wave.
     1. [ ] Hear clicking.
-    1. [ ] Read speech bubble with next text from a list. Examples:
+    1. Read speech bubble with next text from a list. Examples:
         1. May everyday have a porpoise.
         1. Live with a porpoise.
         1. You found a porpoise.
         1. You give me porpoise.
-        1. [ ] After two more repeats phrases.
+        1. [ ] Rainbow.
+        1. [ ] Sunset.
+        1. After two more repeats phrases.
     1. [ ] See hands tap together.

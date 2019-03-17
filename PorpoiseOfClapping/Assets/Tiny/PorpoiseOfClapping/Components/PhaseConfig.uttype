@@ -38,12 +38,21 @@
         "Visibility": 0,
         "EditorOnly": false,
         "Versioned": true
+    }, {
+        "Id": "42cf65fdd61d4a3fb7c636d2c302804f",
+        "Name": "maxPhase",
+        "FieldType": { "Id": "27c155635ccb4ab2bcb79ef5aaf129ec", "Name": "Int8" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
     }],
     "DefaultValue": {
         "Type": { "Id": "c698f7180d1b4afeb6cbadafde23746e", "Name": "PhaseConfig" },
         "Properties": {
             "minDuration": 3,
-            "timeElapsed": 0
+            "timeElapsed": 0,
+            "maxPhase": 6
         }
     }
 }]

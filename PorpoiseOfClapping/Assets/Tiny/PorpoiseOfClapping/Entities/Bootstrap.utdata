@@ -14,12 +14,13 @@
         { "$TypeId": 9, "Id": "fb07578068334409af4e47fc2ebbecb5", "Name": "porpoise" },
         { "$TypeId": 9, "Id": "117e951fa341476ca390d488ea5e2f25", "Name": "FrontWave" },
         { "$TypeId": 9, "Id": "99d9f878a4ab412a90b47098c04e6cd6", "Name": "SpeechBone" },
-        { "$TypeId": 9, "Id": "5727e28184534ca2b107680a954dfe75", "Name": "pixel-speech-bubble1" },
-        { "$TypeId": 9, "Id": "55337200691f41a2b93bea52a8125d4e", "Name": "pixel-speech-bubble2" },
-        { "$TypeId": 9, "Id": "fc2a639a94cb483ea28c5be6b08ee617", "Name": "pixel-speech-bubble3" },
-        { "$TypeId": 9, "Id": "c93e7c3c17fb443a9d583dba80ab17e7", "Name": "pixel-speech-bubble4" },
+        { "$TypeId": 9, "Id": "5727e28184534ca2b107680a954dfe75", "Name": "speech_phase2" },
+        { "$TypeId": 9, "Id": "55337200691f41a2b93bea52a8125d4e", "Name": "speech_phase3" },
+        { "$TypeId": 9, "Id": "fc2a639a94cb483ea28c5be6b08ee617", "Name": "speech_phase4" },
+        { "$TypeId": 9, "Id": "c93e7c3c17fb443a9d583dba80ab17e7", "Name": "speech_phase5" },
         { "$TypeId": 9, "Id": "1cc7f993b69245238cf20e3ee52a1875", "Name": "prompt" },
-        { "$TypeId": 9, "Id": "6f741418fe9546bab40dee7d291d4e25", "Name": "tap_prompt" }
+        { "$TypeId": 9, "Id": "6f741418fe9546bab40dee7d291d4e25", "Name": "tap_prompt" },
+        { "$TypeId": 9, "Id": "0977f0997dd34a90b88c1c486dbb9bb9", "Name": "clap" }
     ]
 },
 {
@@ -366,7 +367,7 @@
 {
     "$TypeId": 5,
     "Id": "5727e28184534ca2b107680a954dfe75",
-    "Name": "pixel-speech-bubble1",
+    "Name": "speech_phase2",
     "Enabled": true,
     "Static": false,
     "Layer": 0,
@@ -389,14 +390,14 @@
     }, {
         "Type": { "Id": "4f5dbbbd22b74ce4a1257817b3be91f5", "Name": "PhaseEnabler" },
         "Properties": {
-            "enabledPhase": 1
+            "enabledPhase": 2
         }
     }]
 },
 {
     "$TypeId": 5,
     "Id": "55337200691f41a2b93bea52a8125d4e",
-    "Name": "pixel-speech-bubble2",
+    "Name": "speech_phase3",
     "Enabled": true,
     "Static": false,
     "Layer": 0,
@@ -419,14 +420,14 @@
     }, {
         "Type": { "Id": "4f5dbbbd22b74ce4a1257817b3be91f5", "Name": "PhaseEnabler" },
         "Properties": {
-            "enabledPhase": 2
+            "enabledPhase": 3
         }
     }]
 },
 {
     "$TypeId": 5,
     "Id": "fc2a639a94cb483ea28c5be6b08ee617",
-    "Name": "pixel-speech-bubble3",
+    "Name": "speech_phase4",
     "Enabled": true,
     "Static": false,
     "Layer": 0,
@@ -449,14 +450,14 @@
     }, {
         "Type": { "Id": "4f5dbbbd22b74ce4a1257817b3be91f5", "Name": "PhaseEnabler" },
         "Properties": {
-            "enabledPhase": 3
+            "enabledPhase": 4
         }
     }]
 },
 {
     "$TypeId": 5,
     "Id": "c93e7c3c17fb443a9d583dba80ab17e7",
-    "Name": "pixel-speech-bubble4",
+    "Name": "speech_phase5",
     "Enabled": true,
     "Static": false,
     "Layer": 0,
@@ -479,7 +480,7 @@
     }, {
         "Type": { "Id": "4f5dbbbd22b74ce4a1257817b3be91f5", "Name": "PhaseEnabler" },
         "Properties": {
-            "enabledPhase": 4
+            "enabledPhase": 5
         }
     }]
 },
@@ -540,5 +541,26 @@
         }
     }, {
         "Type": { "Id": "4f5dbbbd22b74ce4a1257817b3be91f5", "Name": "PhaseEnabler" }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "0977f0997dd34a90b88c1c486dbb9bb9",
+    "Name": "clap",
+    "Enabled": false,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "a60aa1b9ad84a83eefb0d5382a4d5967", "Name": "AudioSource" },
+        "Properties": {
+            "clip": { "$TypeId": 10, "Guid": "274855d5323cf014ebfc421978c1dc60", "FileId": 8300000, "Type": 3 }
+        }
+    }, {
+        "Type": { "Id": "fb67fae37e3e484fa554012ae4edd7c6", "Name": "AudioSourceStart" }
+    }, {
+        "Type": { "Id": "4f5dbbbd22b74ce4a1257817b3be91f5", "Name": "PhaseEnabler" },
+        "Properties": {
+            "enabledPhase": 1
+        }
     }]
 }]
