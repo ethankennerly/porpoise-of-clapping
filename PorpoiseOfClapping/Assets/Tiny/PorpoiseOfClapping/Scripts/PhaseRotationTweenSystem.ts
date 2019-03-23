@@ -7,12 +7,10 @@ namespace game {
                 return;
             }
 
-            let duration:number = phaseConfig.minDuration;
-            let endRadians:number = Math.PI * -0.999;
             this.world.forEach(
                 [ut.Entity, game.RotationTweener, ut.Core2D.TransformLocalRotation],
                 (entity, rotationTweener, transformRotation) => {
-                    this.tweenRotationShort(entity, transformRotation, endRadians, duration);
+                    this.tweenRotationShort(entity, transformRotation, rotationTweener.endRadians, rotationTweener.duration);
                 }
             );
         }
