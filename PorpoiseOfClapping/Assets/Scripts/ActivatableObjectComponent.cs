@@ -8,10 +8,10 @@ using UnityEngine;
 /// Shared component data can refer to a managed game object.
 /// </summary>
 [Serializable]
-public struct EnabledView : ISharedComponentData
+public struct ActivatableObject : ISharedComponentData
 {
     public Bool linkedObjectActive;
     public GameObject linkedObject;
 }
 
-public class EnabledViewComponent : SharedComponentDataProxy<EnabledView> { }
+public class ActivatableObjectComponent : SharedComponentDataProxy<ActivatableObject> { }
