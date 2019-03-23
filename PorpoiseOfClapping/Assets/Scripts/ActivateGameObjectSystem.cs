@@ -23,6 +23,10 @@ namespace Game
             for (int sharedIndex = 0, numShared = m_UniqueTypes.Count; sharedIndex < numShared; ++sharedIndex)
             {
                 ActivatableObject activatableObject = m_UniqueTypes[sharedIndex];
+                m_MainGroup.SetFilter(activatableObject);
+                if (m_MainGroup.CalculateLength() == 0)
+                    continue;
+
                 UpdateGameObjectActive(ref activatableObject);
             }
         }
