@@ -345,6 +345,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1052415581}
   - component: {fileID: 1052415582}
+  - component: {fileID: 1052415584}
+  - component: {fileID: 1052415583}
   m_Layer: 0
   m_Name: pixel-speech-bubble2
   m_TagString: Untagged
@@ -414,6 +416,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1052415583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052415580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 610111fb7db702f4a9f4cfa919d430ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedData:
+    linkedObjectActive:
+      Value: 0
+    linkedObject: {fileID: 1052415580}
+--- !u!114 &1052415584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052415580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf10cdea1344482e91a4f2b58506b77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1162184497
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,6 +488,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1305787278}
   - component: {fileID: 1305787279}
+  - component: {fileID: 1305787281}
+  - component: {fileID: 1305787280}
   m_Layer: 0
   m_Name: pixel-speech-bubble3
   m_TagString: Untagged
@@ -527,6 +559,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1305787280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305787277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 610111fb7db702f4a9f4cfa919d430ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedData:
+    linkedObjectActive:
+      Value: 0
+    linkedObject: {fileID: 1305787277}
+--- !u!114 &1305787281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305787277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf10cdea1344482e91a4f2b58506b77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1499393900
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,6 +597,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1499393902}
   - component: {fileID: 1499393901}
+  - component: {fileID: 1499393904}
+  - component: {fileID: 1499393903}
   m_Layer: 0
   m_Name: tap_prompt
   m_TagString: Untagged
@@ -606,6 +668,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1499393903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499393900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 610111fb7db702f4a9f4cfa919d430ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedData:
+    linkedObjectActive:
+      Value: 1
+    linkedObject: {fileID: 1499393900}
+--- !u!114 &1499393904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499393900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf10cdea1344482e91a4f2b58506b77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1606075824
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,6 +848,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1871257667}
   - component: {fileID: 1871257668}
+  - component: {fileID: 1871257670}
+  - component: {fileID: 1871257669}
   m_Layer: 0
   m_Name: pixel-speech-bubble4
   m_TagString: Untagged
@@ -827,6 +919,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1871257669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871257666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 610111fb7db702f4a9f4cfa919d430ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedData:
+    linkedObjectActive:
+      Value: 0
+    linkedObject: {fileID: 1871257666}
+--- !u!114 &1871257670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871257666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf10cdea1344482e91a4f2b58506b77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1977548714
 GameObject:
   m_ObjectHideFlags: 0
@@ -995,6 +1115,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2094038125}
   - component: {fileID: 2094038126}
+  - component: {fileID: 2094038128}
+  - component: {fileID: 2094038127}
   m_Layer: 0
   m_Name: pixel-speech-bubble1
   m_TagString: Untagged
@@ -1064,3 +1186,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2094038127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094038124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 610111fb7db702f4a9f4cfa919d430ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedData:
+    linkedObjectActive:
+      Value: 0
+    linkedObject: {fileID: 2094038124}
+--- !u!114 &2094038128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094038124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf10cdea1344482e91a4f2b58506b77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
