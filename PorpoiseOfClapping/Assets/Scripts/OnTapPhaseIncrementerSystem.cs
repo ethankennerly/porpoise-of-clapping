@@ -18,23 +18,23 @@ namespace Game
 
             public void Execute(ref PhaseConfig phaseConfig)
             {
-                /* TODO: Port increment phase from Tiny TypeScript to Unity.Entities C#.
-                let phaseConfig = this.world.getConfigData(Game.PhaseConfig);
-                if (phaseConfig.changed) {
+                if (phaseConfig.changed)
+                {
                     phaseConfig.changed = false;
                 }
-                if (phaseConfig.timeElapsed == 0 && phaseConfig.phase == 0) {
+                if (phaseConfig.timeElapsed == 0 && phaseConfig.phase == 0)
+                {
                     phaseConfig.changed = true;
                 }
                 phaseConfig.timeElapsed += deltaTime;
 
-                if (!mouseDown) {
-                    this.world.setConfigData(phaseConfig);
+                if (!mouseDown)
+                {
                     return;
                 }
 
-                if (phaseConfig.phase > 0 && phaseConfig.timeElapsed < phaseConfig.minDuration) {
-                    this.world.setConfigData(phaseConfig);
+                if (phaseConfig.phase > 0 && phaseConfig.timeElapsed < phaseConfig.minDuration)
+                {
                     return;
                 }
 
@@ -45,8 +45,6 @@ namespace Game
                 }
                 phaseConfig.timeElapsed = 0;
                 phaseConfig.changed = true;
-                this.world.setConfigData(phaseConfig);
-                 */
             }
         }
 
