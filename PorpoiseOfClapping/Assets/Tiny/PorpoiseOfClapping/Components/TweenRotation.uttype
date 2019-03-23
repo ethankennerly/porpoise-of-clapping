@@ -1,0 +1,12 @@
+﻿[{
+    "$TypeId": 3,
+    "Id": "a0ab009b5f614e3596355fa366fc0130",
+    "Name": "TweenRotation",
+    "ExportFlags": 0,
+    "Unlisted": false,
+    "Visibility": 0,
+    "TypeCode": "Component",
+    "DefaultValue": {
+        "Type": { "Id": "a0ab009b5f614e3596355fa366fc0130", "Name": "TweenRotation" }
+    }
+}]
