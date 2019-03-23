@@ -7,10 +7,10 @@ namespace game {
         // Only allocates memory once.
         // Otherwise, allocates memory per call.
         // https://github.com/Microsoft/TypeScript/wiki/'this'-in-TypeScript#use-instance-functions
-        startTweenRotationInstance = (entity:ut.Entity,
-                rotationTweener:game.RotationTweener,
+        startTweenRotation2DInstance = (entity:ut.Entity,
+                rotationTweener2D:game.RotationTweener2D,
                 transformRotation:ut.Core2D.TransformLocalRotation) => {
-            this.startTweenRotation(entity, rotationTweener, transformRotation);
+            this.startTweenRotation2D(entity, rotationTweener2D, transformRotation);
         };
 
         OnUpdate():void {
@@ -21,44 +21,44 @@ namespace game {
             }
 
             this.world.forEach(
-                [ut.Entity, game.RotationTweener, ut.Core2D.TransformLocalRotation],
-                this.startTweenRotationInstance
+                [ut.Entity, game.RotationTweener2D, ut.Core2D.TransformLocalRotation],
+                this.startTweenRotation2DInstance
             );
         }
 
         // Able to rotation beyond half a circle.
         //
         // Sets speed of tween rotation and resets tween time to 0.
-        // Depends on TweenRotationSystem to update the rotation.
-        startTweenRotation(entity:ut.Entity,
-                rotationTweener:game.RotationTweener,
+        // Depends on TweenRotation2DSystem to update the rotation.
+        startTweenRotation2D(entity:ut.Entity,
+                rotationTweener2D:game.RotationTweener2D,
                 transformRotation:ut.Core2D.TransformLocalRotation):void {
-            if (rotationTweener.endRadians == 0) {
+            if (rotationTweener2D.endRadians == 0) {
                 return;
             }
 
             let startRotation = new Quaternion().setFromAxisAngle(new Vector3(0, 0, 1), 0);
             transformRotation.rotation = startRotation;
-            let duration:number = rotationTweener.duration;
+            let duration:number = rotationTweener2D.duration;
             if (duration <= this.minDuration) {
                 duration = this.minDuration;
             }
 
-            if (!this.world.hasComponent(entity, game.TweenRotation)) {
-                this.world.addComponent(entity, game.TweenRotation);
+            if (!this.world.hasComponent(entity, game.TweenRotation2D)) {
+                this.world.addComponent(entity, game.TweenRotation2D);
             }
-            let tweenRotation:game.TweenRotation = this.world.getComponentData(entity, game.TweenRotation);
-            tweenRotation.speed = rotationTweener.endRadians / duration;
-            tweenRotation.time = 0;
-            this.world.setComponentData(entity, tweenRotation);
+            let tweenRotation2D:game.TweenRotation2D = this.world.getComponentData(entity, game.TweenRotation2D);
+            tweenRotation2D.speed = rotationTweener2D.endRadians / duration;
+            tweenRotation2D.time = 0;
+            this.world.setComponentData(entity, tweenRotation2D);
         }
 
         // Tween rotation, by shortest distance, never more than half circle.
         // To rotate nearly a full circle, nest one rotator inside another.
         // Copied from TinySamples DinosaurService.ts
         //
-        // An alternative is rotating every frame, as invoked by `startTweenRotation`.
-        tweenRotationShort(entity:ut.Entity, transformRotation:ut.Core2D.TransformLocalRotation,
+        // An alternative is rotating every frame, as invoked by `startTweenRotation2D`.
+        tweenRotation2DShort(entity:ut.Entity, transformRotation:ut.Core2D.TransformLocalRotation,
                 endRadians:number, duration:number):void {
             let startRotation = new Quaternion().setFromAxisAngle(new Vector3(0, 0, 1), 0);
             let endRotation = new Quaternion().setFromAxisAngle(new Vector3(0, 0, 1), endRadians);

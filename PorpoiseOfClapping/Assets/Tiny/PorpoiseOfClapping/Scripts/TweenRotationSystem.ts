@@ -1,6 +1,6 @@
 namespace game {
-    // Depends on RotationTweener configuring and adding TweenRotation.
-    export class TweenRotationSystem extends ut.ComponentSystem {
+    // Depends on RotationTweener2D configuring and adding TweenRotation2D.
+    export class TweenRotation2DSystem extends ut.ComponentSystem {
 
         deltaTime:number;
         rotationStep:Quaternion = new Quaternion();
@@ -12,16 +12,16 @@ namespace game {
         // Otherwise, allocates memory per call.
         // https://github.com/Microsoft/TypeScript/wiki/'this'-in-TypeScript#use-instance-functions
         updateRotationInstance = (entity:ut.Entity,
-                rotationTweener:game.RotationTweener,
-                tweenRotation:game.TweenRotation,
+                rotationTweener2D:game.RotationTweener2D,
+                tweenRotation2D:game.TweenRotation2D,
                 transformRotation:ut.Core2D.TransformLocalRotation) => {
-            this.updateRotation(entity, rotationTweener, tweenRotation, transformRotation);
+            this.updateRotation(entity, rotationTweener2D, tweenRotation2D, transformRotation);
         };
 
         OnUpdate():void {
             this.deltaTime = this.scheduler.deltaTime();
             this.world.forEach(
-                [ut.Entity, game.RotationTweener, game.TweenRotation, ut.Core2D.TransformLocalRotation],
+                [ut.Entity, game.RotationTweener2D, game.TweenRotation2D, ut.Core2D.TransformLocalRotation],
                 this.updateRotationInstance);
         }
 
@@ -29,22 +29,22 @@ namespace game {
         //
         //      rotation.Value = math.mul(math.normalize(rotation.Value), quaternion.AxisAngle(math.up(), rotSpeed.Value * dT));
         updateRotation(entity:ut.Entity,
-                rotationTweener:game.RotationTweener,
-                tweenRotation:game.TweenRotation,
+                rotationTweener2D:game.RotationTweener2D,
+                tweenRotation2D:game.TweenRotation2D,
                 transformRotation:ut.Core2D.TransformLocalRotation):void
         {
-            tweenRotation.time += this.deltaTime;
-            if (tweenRotation.time >= rotationTweener.duration) {
-                let endAngle:number = rotationTweener.endRadians;
+            tweenRotation2D.time += this.deltaTime;
+            if (tweenRotation2D.time >= rotationTweener2D.duration) {
+                let endAngle:number = rotationTweener2D.endRadians;
                 transformRotation.rotation = this.rotationStep.setFromAxisAngle(
                     this.zAxis, endAngle);
 
-                this.world.removeComponent(entity, game.TweenRotation);
+                this.world.removeComponent(entity, game.TweenRotation2D);
                 return;
             }
-            this.world.setComponentData(entity, tweenRotation);
+            this.world.setComponentData(entity, tweenRotation2D);
 
-            let stepAngle:number = tweenRotation.speed * this.deltaTime;
+            let stepAngle:number = tweenRotation2D.speed * this.deltaTime;
             this.rotationStep.setFromAxisAngle(this.zAxis, stepAngle);
             let previousRotation:Quaternion = transformRotation.rotation;
             previousRotation.normalize();
