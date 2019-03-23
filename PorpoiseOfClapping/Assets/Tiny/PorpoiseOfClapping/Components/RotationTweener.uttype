@@ -14,11 +14,20 @@
         "Visibility": 0,
         "EditorOnly": false,
         "Versioned": true
+    }, {
+        "Id": "ff6dd4d07a1e48c9ba673e4a13de684e",
+        "Name": "duration",
+        "FieldType": { "Id": "67325dccf2f047c19c7ef4a045354e67", "Name": "Float32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
     }],
     "DefaultValue": {
         "Type": { "Id": "fc67c5aa223b4449a3ee651dabd2ef86", "Name": "RotationTweener" },
         "Properties": {
-            "endRadians": -3.13686
+            "endRadians": -3.13686,
+            "duration": 3
         }
     }
 }]
