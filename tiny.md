@@ -46,3 +46,5 @@
 - Less stable.
 - Demos get entities by name. So if entity name changes, the code breaks.
 - Demos use several anonymous functions.
+- Demos use ForEach delegate iteration, which the Entities package says cannot be parallelized.
+    - <https://docs.unity3d.com/Packages/com.unity.entities@0.0/manual/entity_iteration_foreach.html>

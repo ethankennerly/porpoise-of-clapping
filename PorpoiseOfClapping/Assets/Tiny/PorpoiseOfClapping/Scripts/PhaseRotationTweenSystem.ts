@@ -20,6 +20,10 @@ namespace game {
         // Tween rotation, by shortest distance, never more than half circle.
         // To rotate nearly a full circle, nest one rotator inside another.
         // Copied from TinySamples DinosaurService.ts
+        //
+        // An alternative is rotating every frame, as in HelloCube sample in Unity.Entities C# sample:
+        //
+        //      rotation.Value = math.mul(math.normalize(rotation.Value), quaternion.AxisAngle(math.up(), rotSpeed.Value * dT));
         tweenRotationShort(entity:ut.Entity, transformRotation:ut.Core2D.TransformLocalRotation,
                 endRadians:number, duration:number):void
         {
