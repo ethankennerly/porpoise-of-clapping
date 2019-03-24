@@ -1,0 +1,12 @@
+using System;
+using Unity.Entities;
+
+[Serializable]
+public struct RotationTweener2D : IComponentData
+{
+    public float endRatdians;
+    public float duration;
+}
+
+[UnityEngine.DisallowMultipleComponent]
+public class RotationTweener2DComponent : ComponentDataProxy<RotationTweener2D> { }
