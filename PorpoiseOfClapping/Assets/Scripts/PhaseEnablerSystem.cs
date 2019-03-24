@@ -3,24 +3,25 @@ using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
 using Unity.Jobs;
-using Unity.Mathematics;
-using Unity.Transforms;
 using UnityEngine;
 
 namespace Game
 {
-    public class PhaseEnablerSystem : JobComponentSystem
+    public class PhaseEnablerSystem : ComponentSystem
     {
         private ComponentGroup m_PhaseConfigGroup;
+        private ComponentGroup m_PhaseEnablerGroup;
 
         protected override void OnCreateManager()
         {
             m_PhaseConfigGroup = GetComponentGroup(typeof(PhaseConfig));
+            m_PhaseEnablerGroup = GetComponentGroup(typeof(PhaseEnabler), typeof(ActivatableObject));
         }
 
         private bool TryGetFirstPhaseConfig(ref PhaseConfig phaseConfig)
         {
-            NativeArray<PhaseConfig> phaseConfigs = m_PhaseConfigGroup.ToComponentDataArray<PhaseConfig>(Allocator.TempJob);
+            NativeArray<PhaseConfig> phaseConfigs = m_PhaseConfigGroup.ToComponentDataArray<PhaseConfig>(
+                Allocator.TempJob);
             if (phaseConfigs.Length < 1)
             {
                 phaseConfigs.Dispose();
@@ -34,66 +35,52 @@ namespace Game
         }
 
         [BurstCompile]
-        struct PhaseEnablerJob : IJobProcessComponentData<PhaseEnabler>
+        struct PhaseEnablerSharedJob
         {
             [ReadOnly] public PhaseConfig phaseConfig;
 
-            public void Execute(ref PhaseEnabler phaseEnabler)
+            public void ExecuteEach(EntityManager entityManager, ComponentGroup phaseEnablerGroup)
             {
+                NativeArray<Entity> entities = phaseEnablerGroup.ToEntityArray(Allocator.TempJob);
+
+                for (int entityIndex = 0, numEntities = entities.Length; entityIndex < numEntities; ++entityIndex)
+                {
+                    Entity entity = entities[entityIndex];
+                    PhaseEnabler phaseEnabler = entityManager.GetComponentData<PhaseEnabler>(entity);
+                    ActivatableObject activatableObject = entityManager.GetSharedComponentData<ActivatableObject>(entity);
+                    if (!TryActivateObjectByPhase(ref phaseEnabler, ref activatableObject))
+                        continue;
+                    
+                    entityManager.SetSharedComponentData<ActivatableObject>(entity, activatableObject);
+                }
+                entities.Dispose();
+            }
+
+            public bool TryActivateObjectByPhase(ref PhaseEnabler phaseEnabler, ref ActivatableObject activatableObject)
+            {
+                int phase = phaseConfig.phase;
+                bool enabled = phase == phaseEnabler.enabledPhase;
+                if (activatableObject.linkedObjectActive == enabled)
+                    return false;
+
+                activatableObject.linkedObjectActive = enabled;
+                activatableObject.synchronized = false;
+                return true;
             }
         }
 
-        protected override JobHandle OnUpdate(JobHandle inputDependencies)
+        protected override void OnUpdate()
         {
             PhaseConfig phaseConfig = default(PhaseConfig);
             if (!TryGetFirstPhaseConfig(ref phaseConfig))
-                return default(JobHandle);
+                return;
 
-            var job = new PhaseEnablerJob()
+            var sharedJob = new PhaseEnablerSharedJob()
             {
                 phaseConfig = phaseConfig
             };
 
-            return job.Schedule(this, inputDependencies);
-        }
-
-    }
-}
-/*
-namespace game {
-    export class PhaseEnablerSystem extends ut.ComponentSystem {
-        OnUpdate():void {
-            let phaseConfig = this.world.getConfigData(game.PhaseConfig);
-            if (!phaseConfig.changed) {
-                return;
-            }
-
-            let phase:number = phaseConfig.phase;
-            this.world.forEach(
-                [ut.Entity, game.PhaseEnabler],
-                (entity, phaseEnabler) => {
-                    let enabled:boolean = phase == phaseEnabler.enabledPhase;
-                    let changed:boolean = game.GameService.setEntityEnabled(this.world, entity, enabled);
-                }
-            );
-
-            // Disabled are hidden from queries.
-            this.world.forEach(
-                [ut.Entity, game.PhaseEnabler, ut.Disabled],
-                (entity, phaseEnabler, disabled) => {
-                    let enabled:boolean = phase == phaseEnabler.enabledPhase;
-                    let changed:boolean = game.GameService.setEntityEnabled(this.world, entity, enabled);
-                    let willAudioStart:boolean = this.world.hasComponent(entity, game.OnEntityEnableAudioSourceStart);
-                    if (!enabled) {
-                        return;
-                    }
-                    if (!willAudioStart) {
-                        return;
-                    }
-                    AudioSourceUtils.start(this.world, entity);
-                }
-            );
+            sharedJob.ExecuteEach(EntityManager, m_PhaseEnablerGroup);
         }
     }
 }
- */
