@@ -50,7 +50,7 @@ namespace Game
                     ActivatableObject activatableObject = entityManager.GetSharedComponentData<ActivatableObject>(entity);
                     if (!TryActivateObjectByPhase(ref phaseEnabler, ref activatableObject))
                         continue;
-                    
+
                     entityManager.SetSharedComponentData<ActivatableObject>(entity, activatableObject);
                 }
                 entities.Dispose();
@@ -73,6 +73,9 @@ namespace Game
         {
             PhaseConfig phaseConfig = default(PhaseConfig);
             if (!TryGetFirstPhaseConfig(ref phaseConfig))
+                return;
+
+            if (!phaseConfig.changed)
                 return;
 
             var sharedJob = new PhaseEnablerSharedJob()

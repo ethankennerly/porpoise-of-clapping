@@ -10,13 +10,13 @@ namespace Game
 {
     public class PhaseRotationTween2DSystem : JobComponentSystem
     {
+        private const float kMinDuration = 0.0001f;
+
         private ComponentGroup m_PhaseConfigGroup;
-        private ComponentGroup m_PhaseEnablerGroup;
 
         protected override void OnCreateManager()
         {
             m_PhaseConfigGroup = GetComponentGroup(typeof(PhaseConfig));
-            m_PhaseEnablerGroup = GetComponentGroup(typeof(PhaseEnabler), typeof(ActivatableObject));
         }
 
         private bool TryGetFirstPhaseConfig(ref PhaseConfig phaseConfig)
@@ -42,16 +42,35 @@ namespace Game
             [ReadOnly] public PhaseConfig phaseConfig;
             [ReadOnly] public float3 zAxis;
 
-            public void Execute(ref Rotation rotation, ref RotationTweener2D tweenRotation2D)
+            public void Execute(ref Rotation rotation, ref RotationTweener2D rotationTweener2D)
             {
+                if (!phaseConfig.changed)
+                    return;
+
+                if (phaseConfig.phase < 1)
+                    return;
+
+                if (rotationTweener2D.endRadians == 0f)
+                    return;
+
+                quaternion startRotation = quaternion.AxisAngle(zAxis, 0f);
+                rotation.Value = startRotation;
+                float duration = rotationTweener2D.duration;
+                if (duration <= kMinDuration)
+                {
+                    duration = kMinDuration;
+                }
+
+                rotationTweener2D.speed = rotationTweener2D.endRadians / duration;
+                rotationTweener2D.time = 0f;
+                rotationTweener2D.enabled = true;
             }
         }
 
         protected override JobHandle OnUpdate(JobHandle inputDependencies)
         {
             PhaseConfig phaseConfig = default(PhaseConfig);
-            if (!TryGetFirstPhaseConfig(ref phaseConfig))
-                return default(JobHandle);
+            TryGetFirstPhaseConfig(ref phaseConfig);
 
             var job = new PhaseRotationTween2DJob()
             {
