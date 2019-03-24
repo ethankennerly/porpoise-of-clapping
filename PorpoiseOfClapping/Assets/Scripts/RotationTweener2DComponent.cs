@@ -4,7 +4,7 @@ using Unity.Entities;
 [Serializable]
 public struct RotationTweener2D : IComponentData
 {
-    public float endRatdians;
+    public float endRadians;
     public float duration;
 }
 
