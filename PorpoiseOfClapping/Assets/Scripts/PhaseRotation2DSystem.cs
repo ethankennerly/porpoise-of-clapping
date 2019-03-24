@@ -6,29 +6,60 @@ using Unity.Mathematics;
 using Unity.Transforms;
 using UnityEngine;
 
-// This system updates all entities in the scene with both a RotationTweener2D and Rotation component.
-public class PhaseRotationTween2DSystem : JobComponentSystem
+namespace Game
 {
-    // Use the [BurstCompile] attribute to compile a job with Burst. You may see significant speed ups, so try it!
-    [BurstCompile]
-    struct PhaseRotationTween2DJob : IJobProcessComponentData<Rotation, RotationTweener2D>
+    public class PhaseRotationTween2DSystem : JobComponentSystem
     {
-        [ReadOnly] public float deltaTime;
-        [ReadOnly] public float3 zAxis;
+        private ComponentGroup m_PhaseConfigGroup;
+        private ComponentGroup m_PhaseEnablerGroup;
 
-        public void Execute(ref Rotation rotation, ref RotationTweener2D tweenRotation2D)
+        protected override void OnCreateManager()
         {
+            m_PhaseConfigGroup = GetComponentGroup(typeof(PhaseConfig));
+            m_PhaseEnablerGroup = GetComponentGroup(typeof(PhaseEnabler), typeof(ActivatableObject));
         }
-    }
 
-    protected override JobHandle OnUpdate(JobHandle inputDependencies)
-    {
-        var job = new PhaseRotationTween2DJob()
+        private bool TryGetFirstPhaseConfig(ref PhaseConfig phaseConfig)
         {
-            deltaTime = Time.deltaTime,
-            zAxis = new float3(0f, 0f, 1f)
-        };
+            NativeArray<PhaseConfig> phaseConfigs = m_PhaseConfigGroup.ToComponentDataArray<PhaseConfig>(
+                Allocator.TempJob);
 
-        return job.Schedule(this, inputDependencies);
+            if (phaseConfigs.Length < 1)
+            {
+                phaseConfigs.Dispose();
+                return false;
+            }
+
+            phaseConfig = phaseConfigs[0];
+
+            phaseConfigs.Dispose();
+            return true;
+        }
+
+        [BurstCompile]
+        struct PhaseRotationTween2DJob : IJobProcessComponentData<Rotation, RotationTweener2D>
+        {
+            [ReadOnly] public PhaseConfig phaseConfig;
+            [ReadOnly] public float3 zAxis;
+
+            public void Execute(ref Rotation rotation, ref RotationTweener2D tweenRotation2D)
+            {
+            }
+        }
+
+        protected override JobHandle OnUpdate(JobHandle inputDependencies)
+        {
+            PhaseConfig phaseConfig = default(PhaseConfig);
+            if (!TryGetFirstPhaseConfig(ref phaseConfig))
+                return default(JobHandle);
+
+            var job = new PhaseRotationTween2DJob()
+            {
+                phaseConfig = phaseConfig,
+                zAxis = new float3(0f, 0f, 1f)
+            };
+
+            return job.Schedule(this, inputDependencies);
+        }
     }
 }
