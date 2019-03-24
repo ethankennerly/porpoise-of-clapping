@@ -6,10 +6,16 @@ using Unity.Mathematics;
 using Unity.Transforms;
 using UnityEngine;
 
-// This system updates all entities in the scene with both a RotationTweener2D and Rotation component.
+/// <summary>
+/// To rotate the game object, attach all these proxies to the object:
+/// - Rotation Tweener 2D Component
+/// - Rotation Proxy
+/// - Position Proxy
+/// - Copy Initial Transform From Game Object Proxy
+/// - Copy Transform To Game Object Proxy
+/// </summary>
 public class TweenRotation2DSystem : JobComponentSystem
 {
-    // Use the [BurstCompile] attribute to compile a job with Burst. You may see significant speed ups, so try it!
     [BurstCompile]
     struct TweenRotation2DJob : IJobProcessComponentData<Rotation, RotationTweener2D>
     {
